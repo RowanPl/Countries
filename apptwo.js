@@ -10,8 +10,10 @@ searchForm.addEventListener('submit', searchCountry);
 function searchCountry(e) {
     e.preventDefault();
     fetchCountries(searchValue.value);
-}
+ const searchValue = document.getElementById('search-value');
+searchValue.value = '';
 fetchCountries()
+}
 function fetchCountries(name) {
     try {
         fetch(`https://restcountries.com/v2/name/${name}`)
