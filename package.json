@@ -17,6 +17,11 @@
     "axios": "^1.3.3",
     "gh-pages": "^5.0.0"
   },
+    "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
+  },
   "devDependencies": {
     "buffer": "^5.7.1",
     "parcel": "^2.0.0",
