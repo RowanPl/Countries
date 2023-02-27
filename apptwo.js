@@ -16,9 +16,7 @@ searchValue.value = '';
 }
 function fetchCountries(name) {
     try {
-        fetch(`https://restcountries.com/v2/name/${name}`)
-            .then(response => response.json())
-            .then((data) => {
+        const response = await axios.get(`https://restcountries.com/v2/name/${name}`)
                 countries = data[0];
                 showCountry();
                 searchValue.value = '';
