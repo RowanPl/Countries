@@ -13,7 +13,6 @@ function searchCountry(e) {
     fetchCountries(searchValue.value);
 
 searchValue.value = '';
-fetchCountries()
 }
 function fetchCountries(name) {
     try {
