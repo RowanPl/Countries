@@ -4,7 +4,7 @@ let countries;
 let indexByName;
 
 const searchResult = document.getElementById('search-result');
-const searchValue = document.getElementById('search-value')
+const searchForm = document.getElementById('search-form')
 searchForm.addEventListener('submit', searchCountry);
 
 function searchCountry(e) {
