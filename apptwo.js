@@ -17,7 +17,7 @@ searchValue.value = '';
 fetchCountries()
     async function fetchCountries(name) {
         try {
-            const response = await fetch(`https://restcountries.com/v2/name/${name}`)
+            const response = await axios.get(`https://restcountries.com/v2/name/${name}`)
             countries = response.data[0]
             showCountry()
 
@@ -88,7 +88,7 @@ randomButton.addEventListener('click',randomCountries);
 
 async function randomCountries() {
     try {
-        const response = await fetch(`https://restcountries.com/v2/all`)
+        const response = await axios.get(`https://restcountries.com/v2/all`)
         countries = response.data
       randomCountry()
 
