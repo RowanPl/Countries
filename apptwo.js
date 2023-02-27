@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios/dist/browser/axios.cjs';
 
 let countries;
 let indexByName;
