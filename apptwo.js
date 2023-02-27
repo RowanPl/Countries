@@ -4,33 +4,28 @@ let countries;
 let indexByName;
 
 const searchResult = document.getElementById('search-result');
-const searchForm = document.getElementById('search-form')
+const searchValue = document.getElementById('search-value')
 searchForm.addEventListener('submit', searchCountry);
 
-function searchCountry(e){
+function searchCountry(e) {
     e.preventDefault();
-    const searchValue = document.getElementById('search-value');
-
-fetchCountries(searchValue.value);
-searchValue.value = '';
+    fetchCountries(searchValue.value);
 }
 fetchCountries()
-    async function fetchCountries(name) {
-        try {
-            const response = await fetch(`https://restcountries.com/v2/name/${name}`)
+function fetchCountries(name) {
+    try {
+        fetch(`https://restcountries.com/v2/name/${name}`)
             .then(response => response.json())
-            .then(console.log)
-            
-            countries = response.data[0]
-            showCountry()
-
-
-        } catch (e) {
-            console.error(e);
-        }
-
-    }
-
+            .then((data) => {
+                console.log(data)
+                countries = data[0];
+                showCountry();
+                searchValue.value = '';
+            })
+    } catch (e) {
+        console.error(e);
+    }
+}
 
 function showCountry() {
     const country = document.getElementById('Specific_Country')
