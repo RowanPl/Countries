@@ -18,7 +18,7 @@ fetchCountries()
     async function fetchCountries(name) {
         try {
             const response = await fetch(`https://restcountries.com/v2/name/${name}`)
-            .then(response => respons.json)
+            .then(response => response.json)
             countries = response.data[0]
             showCountry()
 
