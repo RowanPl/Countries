@@ -19,7 +19,6 @@ function fetchCountries(name) {
         fetch(`https://restcountries.com/v2/name/${name}`)
             .then(response => response.json())
             .then((data) => {
-                console.log(data)
                 countries = data[0];
                 showCountry();
                 searchValue.value = '';
@@ -100,8 +99,6 @@ async function randomCountries() {
 
 function randomCountry(){
     let index = Math.floor(Math.random() * (countries.length -1));
-    console.log(countries[index].name)
-    console.log(index)
     fetchCountries(countries[index].name)
 }
 
