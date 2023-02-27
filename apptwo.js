@@ -21,7 +21,7 @@ fetchCountries()
             .then(response => response.json())
             .then(console.log)
             
-            countries = response.data(0)
+            countries = response.data[0]
             showCountry()
 
 
