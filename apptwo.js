@@ -5,12 +5,13 @@ let indexByName;
 
 const searchResult = document.getElementById('search-result');
 const searchForm = document.getElementById('search-form')
+let searchValue = document.getElementById('search-value');
 searchForm.addEventListener('submit', searchCountry);
 
 function searchCountry(e) {
     e.preventDefault();
     fetchCountries(searchValue.value);
- const searchValue = document.getElementById('search-value');
+
 searchValue.value = '';
 fetchCountries()
 }
