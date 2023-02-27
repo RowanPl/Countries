@@ -16,14 +16,19 @@ searchValue.value = '';
 }
 function fetchCountries(name) {
     try {
-        const response = await axios.get(`https://restcountries.com/v2/name/${name}`)
-                countries = response.data[0];
-                showCountry();
-                searchValue.value = '';
-            })
-    } catch (e) {
-        console.error(e);
-    }
+    fetch(`https://restcountries.com/v2/name/${name}`)
+        .then(response => response.json())
+        .then((data) => {
+            console.log(data)
+            countries = data[0];
+            showCountry();
+            searchValue.value = '';
+        })
+
+    }catch (e){
+        console.error(e); 
+    } 
+  }
 }
 
 function showCountry() {
