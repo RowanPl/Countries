@@ -1,4 +1,4 @@
-import axios from '/axios';
+import axios from 'https://github.com/axios/axios';
 
 let countries;
 let indexByName;
