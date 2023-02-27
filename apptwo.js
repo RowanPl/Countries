@@ -1,5 +1,4 @@
 import axios from 'axios';
-console.log('Hallo daar!');
 
 let countries;
 let indexByName;
