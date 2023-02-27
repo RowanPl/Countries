@@ -29,7 +29,7 @@ function fetchCountries(name) {
         console.error(e); 
     } 
   }
-}
+
 
 function showCountry() {
     const country = document.getElementById('Specific_Country')
