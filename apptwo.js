@@ -19,6 +19,8 @@ fetchCountries()
         try {
             const response = await fetch(`https://restcountries.com/v2/name/${name}`)
             .then(response => response.json())
+            .then(console.log)
+            
             countries = response.data[0]
             showCountry()
 
