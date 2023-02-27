@@ -35,7 +35,7 @@ function showCountry() {
         `<div id="DivContainer"> 
        
             <span id="flag-and-text"><p id="wiki">click the flag to go to the wikipedia page</p>  
-           <a href="https://en.wikipedia.org/wiki/${countries.name}" target="_blank"> <img src="${countries.flag}" alt="The national flag of ${countries.name}" id="flag"></a>
+           <a href="https://en.wikipedia.org/wiki/${countries.name}" target="_blank"> <img src="${countries.flags.png}" alt="The national flag of ${countries.name}" id="flag"></a>
            </span>
             <div id="text">
             <p> ${countries.name} is situated in ${countries.subregion}.</p>
