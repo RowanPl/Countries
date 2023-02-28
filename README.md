@@ -20,9 +20,6 @@
 ![GitHub Repo Stars](https://img.shields.io/github/stars/RowanPl/Countries?style=for-the-badge)
 
 
-
-null
-
 ## Features
 
 Shows a country by name or randomize button
